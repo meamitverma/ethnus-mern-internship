@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task5 Javascript</title>
+    <style>
+        body {
+            display: grid;
+            place-content: center;
+        }
+       
+    </style>
+</head>
+<body>
+    <input type="text" id="text" required>
+    <button onclick="reverse()">Reverse</button>
+    <p id="output">Output: </p>
+
+
+    <script>
+        const reverse = () => {
+            const inputElem = document.getElementById('text');
+            const outputElem = document.getElementById('output');
+            let str = inputElem.value;
+            // console.log(inputElem.value)
+
+
+            let revStr = str.split('').reverse().join('');
+
+
+            outputElem.innerHTML = revStr;
+
+
+        }
+    </script>
+</body>
+</html>
