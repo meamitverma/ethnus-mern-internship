@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task5 Javascript</title>
+    <title>Task4 Javascript</title>
     <style>
         body {
             display: grid;
@@ -13,23 +13,28 @@
     </style>
 </head>
 <body>
-    <input type="text" id="text" required>
+    <input type="number" id="number" required>
     <button onclick="reverse()">Reverse</button>
     <p id="output">Output: </p>
 
 
     <script>
         const reverse = () => {
-            const inputElem = document.getElementById('text');
+            const inputElem = document.getElementById('number');
             const outputElem = document.getElementById('output');
-            let str = inputElem.value;
+            let num = parseInt(inputElem.value);
             // console.log(inputElem.value)
 
 
-            let revStr = str.split('').reverse().join('');
+            let revNum = 0;
+            while (num != 0) {
+                let ld = num % 10;
+                revNum = revNum * 10 + ld;
+                num = parseInt(num / 10);
+            }
 
 
-            outputElem.innerHTML = revStr;
+            outputElem.innerHTML = revNum;
 
 
         }

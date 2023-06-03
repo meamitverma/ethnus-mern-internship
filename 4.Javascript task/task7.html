@@ -29,8 +29,6 @@
         <label for="num2">2nd Number:</label>
         <input type="number" name="num2" id="num2" placeholder="Enter the second number" required>
         <br>
-        <button onclick="add()">Add</button>
-        <button onclick="subtract()">Subtract</button>
         <button onclick="multiply()">Multiply</button>
         <button onclick="divide()">Divide</button>
         <br>
@@ -44,26 +42,6 @@
         const num1Elem = document.getElementById('num1');
         const num2Elem = document.getElementById('num2');
         const outputElem = document.getElementById('output');
-
-
-        const add = ()=> {
-            const num1 = parseInt(num1Elem.value)
-            const num2 = parseInt(num2Elem.value)
-
-
-            let res = num1 + num2;
-            outputElem.innerText = res;
-        }
-
-
-        const subtract = ()=> {
-            const num1 = parseInt(num1Elem.value)
-            const num2 = parseInt(num2Elem.value)
-
-
-            let res = num1 - num2;
-            outputElem.innerText = res;
-        }
 
 
         const multiply = ()=> {
